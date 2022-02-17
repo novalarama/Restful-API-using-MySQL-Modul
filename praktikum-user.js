@@ -1,7 +1,7 @@
 // initial library
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
+const express = require('express')//untuk membuat endpoint
+const bodyParser = require('body-parser')//untuk membaca request bagian body
+const cors = require('cors')// untuk mengijinkan API diakses oleh server lain
 const mysql = require('mysql')
 
 // implementation
@@ -115,7 +115,7 @@ app.put("/user", (request, response)=>{
         }
     ]
     //create sql query
-    let sql = "update mobil SET ? WHERE ?"
+    let sql = "update user SET ? WHERE ?"
 
     //run query
     connection.query(sql, data,(error, result)=>{
